@@ -1,0 +1,17 @@
+h1 {
+	font-size: 36px;
+}
+
+.container {
+	border: 1px solid black;
+}
+
+label {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+input {
+	height: 38px;
+	border-color: black !important;
+}
