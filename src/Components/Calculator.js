@@ -1,6 +1,14 @@
+import { useState } from 'react';
 import '../Styles/Calculator.css';
 
-function Calculator() {
+const Calculator = () => {
+	const [homePrice, setHomePrice] = useState('');
+
+	// const handleChange = (event) => {
+	// 	setHomePrice(event.target.value);
+	// 	// homePrice = ;
+	// };
+
 	return (
 		<div className='container'>
 			<h1>Mortgage calculator</h1>
@@ -11,7 +19,11 @@ function Calculator() {
 						type='number'
 						class='form-control'
 						placeholder='$1000000'
-					></input>
+						onChange={handleChange}
+						value={homePrice}
+					>
+						${homePrice}
+					</input>
 				</div>
 				<div className=''>
 					<label className='mb-1'>Down payment(6%)</label>
@@ -33,5 +45,5 @@ function Calculator() {
 			</div>
 		</div>
 	);
-}
+};
 export default Calculator;
