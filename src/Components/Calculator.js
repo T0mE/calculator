@@ -2,45 +2,48 @@ import { useState } from 'react';
 import '../Styles/Calculator.css';
 
 const Calculator = () => {
-	const [homePrice, setHomePrice] = useState('');
+	let [num, setNum] = useState(245000);
 
-	// const handleChange = (event) => {
-	// 	setHomePrice(event.target.value);
-	// 	// homePrice = ;
-	// };
+	let incNum = () => {
+		if (num < 10000000) {
+			setNum(Number(num) + 50000);
+		}
+	};
+	let decNum = () => {
+		if (num > 0) {
+			setNum(num - 50000);
+		}
+	};
+	let handleChange = (e) => {
+		setNum(e.target.value);
+	};
 
 	return (
-		<div className='container'>
-			<h1>Mortgage calculator</h1>
-			<div className='d-flex flex-row'>
-				<div className=''>
-					<label className='mb-1'>Home price</label>
-					<input
-						type='number'
-						class='form-control'
-						placeholder='$1000000'
-						onChange={handleChange}
-						value={homePrice}
+		<div className='col-xl-1'>
+			<div className='input-group'>
+				<div className='input-group-prepend'>
+					<button
+						className='btn btn-outline-primary'
+						type='button'
+						onClick={decNum}
 					>
-						${homePrice}
-					</input>
+						-
+					</button>
 				</div>
-				<div className=''>
-					<label className='mb-1'>Down payment(6%)</label>
-					<input
-						type='tel'
-						class='form-control'
-						placeholder='$60,000'
-						inputMode='numeric'
-					></input>
-				</div>
-				<div className='d-flex align-items-end'>
-					<input
-						type='tel'
-						class='form-control'
-						placeholder='3%'
-						inputMode='numeric'
-					></input>
+				<input
+					type='text'
+					className='form-control'
+					value={num}
+					onChange={handleChange}
+				/>
+				<div className='input-group-prepend'>
+					<button
+						className='btn btn-outline-primary'
+						type='button'
+						onClick={incNum}
+					>
+						+
+					</button>
 				</div>
 			</div>
 		</div>
