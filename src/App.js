@@ -2,6 +2,7 @@ import Navbar from './Components/Navbar';
 import Calculator from './Components/Calculator';
 import './Styles/App.css';
 import Year from './Components/Year';
+import Interest from './Components/Interest';
 
 function App() {
 	return (
@@ -25,6 +26,7 @@ function App() {
 			<Navbar />
 			<Calculator />
 			<Year />
+			<Interest />
 		</div>
 	);
 }

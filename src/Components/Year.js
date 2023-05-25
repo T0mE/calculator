@@ -20,7 +20,7 @@ const Year = () => {
 	};
 
 	return (
-		<div className='col-xl-1'>
+		<div className='col-md-1'>
 			<div className='input-group'>
 				<div className='input-group-prepend'>
 					<button

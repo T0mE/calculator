@@ -5,8 +5,7 @@ function Navbar() {
 			<div>
 				<div className='logo'>
 					<p>
-						<span className='logo-company'>N</span>{' '}
-						<span className='name-company'>nerdwallet</span>
+						<span className='name-company'>monay</span>
 					</p>
 				</div>
 			</div>

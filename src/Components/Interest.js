@@ -1,23 +1,21 @@
 import { useState } from 'react';
-import '../Styles/Calculator.css';
 
-const Calculator = () => {
-	let [num, setNum] = useState(245000);
+const Interest = () => {
+	let [interest, setNum] = useState(8);
 
-	let incNum = () => {
-		if (num < 10000000) {
-			setNum(Number(num) + 50000);
+	let incInt = () => {
+		if (interest < 1) {
+			setNum(Number(interest) + 1);
 		}
 	};
-	let decNum = () => {
-		if (num > 0) {
-			setNum(num - 50000);
+	let decInt = () => {
+		if (interest > 0) {
+			setNum(interest - 1);
 		}
 	};
 	let handleChange = (e) => {
 		setNum(e.target.value);
 	};
-
 	return (
 		<div className='col-md-1'>
 			<div className='input-group'>
@@ -25,7 +23,7 @@ const Calculator = () => {
 					<button
 						className='btn btn-outline-primary'
 						type='button'
-						onClick={decNum}
+						onClick={decInt}
 					>
 						-
 					</button>
@@ -34,15 +32,14 @@ const Calculator = () => {
 					type='text'
 					className='form-control'
 					inputMode='numeric'
-					pattern='[0-9]{7}'
-					value={num}
+					value={interest + '%'}
 					onChange={handleChange}
 				/>
 				<div className='input-group-prepend'>
 					<button
 						className='btn btn-outline-primary'
 						type='button'
-						onClick={incNum}
+						onClick={incInt}
 					>
 						+
 					</button>
@@ -51,4 +48,5 @@ const Calculator = () => {
 		</div>
 	);
 };
-export default Calculator;
+
+export default Interest;
