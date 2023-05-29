@@ -10,7 +10,7 @@ const Calculator = () => {
 		}
 	};
 	let decNum = () => {
-		if (num > 0) {
+		if (num > 50000) {
 			setNum(num - 50000);
 		}
 	};
@@ -34,7 +34,7 @@ const Calculator = () => {
 					type='text'
 					className='form-control'
 					inputMode='numeric'
-					pattern='[0-9]{7}'
+					// pattern='[0-9]{7}'
 					value={num}
 					onChange={handleChange}
 				/>

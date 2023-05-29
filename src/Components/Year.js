@@ -1,16 +1,16 @@
 import { useState } from 'react';
 
 const Year = () => {
-	let [year, setYear] = useState(15);
+	let [year, setYear] = useState(25);
 
 	let incYear = () => {
-		if (year < 15) {
+		if (year < 35) {
 			setYear(Number(year) + 5);
 		}
 	};
 
 	let decYear = () => {
-		if (year < 15) {
+		if (year > 5) {
 			setYear(Number(year) - 5);
 		}
 	};

@@ -4,13 +4,13 @@ const Interest = () => {
 	let [interest, setNum] = useState(8);
 
 	let incInt = () => {
-		if (interest < 1) {
-			setNum(Number(interest) + 1);
+		if (interest < 20) {
+			setNum(Number(interest) + 0.5);
 		}
 	};
 	let decInt = () => {
-		if (interest > 0) {
-			setNum(interest - 1);
+		if (interest > 0.5) {
+			setNum(interest - 0.5);
 		}
 	};
 	let handleChange = (e) => {
@@ -31,7 +31,7 @@ const Interest = () => {
 				<input
 					type='text'
 					className='form-control'
-					inputMode='numeric'
+					// inputMode='numeric'
 					value={interest + '%'}
 					onChange={handleChange}
 				/>
