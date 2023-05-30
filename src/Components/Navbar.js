@@ -5,7 +5,7 @@ function Navbar() {
 			<div>
 				<div className='logo'>
 					<p>
-						<span className='name-company'>monay</span>
+						<span className='name-company'>money</span>
 					</p>
 				</div>
 			</div>
